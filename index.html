@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculation Form</title>
+    </head>
+    <body>
+        <h1>Calculate Qoc and H_opt</h1>
+        <form id="calculationForm">
+            <label for="kh">Horizontal Permeability (kh) in md:</label>
+            <input type="number" id="kh" name="kh" step="any" required /><br /><br />
+
+            <label for="ho">Thickness (ho) in ft:</label>
+            <input type="number" id="ho" name="ho" step="any" required /><br /><br />
+
+            <label for="L">Length (L) in ft:</label>
+            <input type="number" id="L" name="L" step="any" required /><br /><br />
+
+            <label for="rw">Well Radius (rw) in ft:</label>
+            <input type="number" id="rw" name="rw" step="any" required /><br /><br />
+
+            <label for="rho_o_minus_rho_g">Density Difference (ρo-ρg) in lb/ft³:</label>
+            <input
+                type="number"
+                id="rho_o_minus_rho_g"
+                name="rho_o_minus_rho_g"
+                step="any"
+                required
+            /><br /><br />
+
+            <label for="rho_w_minus_rho_o">Density Difference (ρw-ρo) in lb/ft³:</label>
+            <input
+                type="number"
+                id="rho_w_minus_rho_o"
+                name="rho_w_minus_rho_o"
+                step="any"
+                required
+            /><br /><br />
+
+            <label for="mu_o">Oil Viscosity (μo) in cp:</label>
+            <input type="number" id="mu_o" name="mu_o" step="any" required /><br /><br />
+
+            <label for="Bo">Oil Formation Volume Factor (Bo) in rb/stb:</label>
+            <input type="number" id="Bo" name="Bo" step="any" required /><br /><br />
+
+            <label for="A">Area (A) in acres:</label>
+            <input type="number" id="A" name="A" step="any" required /><br /><br />
+
+            <button type="button" onclick="calculateResults()">Calculate</button>
+        </form>
+
+        <h2>Results</h2>
+        <p id="qocResult">qoc:</p>
+        <p id="hOptResult">h_opt:</p>
+
+        <script src="script.js"></script>
+    </body>
+</html>
